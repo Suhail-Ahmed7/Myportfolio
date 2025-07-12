@@ -37,8 +37,9 @@ const App = () => {
 
   return (
     <>
-      <Navbar activeSection={activeSection} />
+    
       <main>
+          <Navbar activeSection={activeSection} />
         <Home ref={(el) => (sectionsRef.current[0] = el)} />
         <About ref={(el) => (sectionsRef.current[1] = el)} />
         <Projects ref={(el) => (sectionsRef.current[2] = el)} />
