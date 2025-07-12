@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Certifications from './components/Certifications';
-import Education from './components/Education';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import About from './Components/About';
+import Projects from './Components/Projects';
+import Skills from './Components/Skills';
+import Certifications from './Components/Certifications';
+import Education from './Components/Education';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 import AOS from 'aos';        
 import 'aos/dist/aos.css'; 
 import './App.css'
@@ -39,7 +39,7 @@ const App = () => {
     <>
     
       <main>
-          <Navbar activeSection={activeSection} />
+        <Navbar activeSection={activeSection} />
         <Home ref={(el) => (sectionsRef.current[0] = el)} />
         <About ref={(el) => (sectionsRef.current[1] = el)} />
         <Projects ref={(el) => (sectionsRef.current[2] = el)} />
