@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useRef } from 'react';
 import myProfile from '../assets/myProfile.jpeg'
-import myResume from '../assets/myResume.pdf'
+import MyResume from '../assets/MyResume.pdf'
 const About = forwardRef((props, ref) => {
   const counterRefs = useRef([]);
 
@@ -105,7 +105,7 @@ const About = forwardRef((props, ref) => {
                 </div>
               </div>
               <div className="about-cta-buttons">
-                <a href={myResume} download className="about-btn about-btn-primary">
+                <a href={MyResume} download className="about-btn about-btn-primary">
                   <span className="about-btn-content">
                     <i className="fas fa-download"></i>
                     <span>Download Resume</span>
