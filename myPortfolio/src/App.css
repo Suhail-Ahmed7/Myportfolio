@@ -55,7 +55,7 @@ h2::after {
 
 /* Home section */
 #home {
-  background-image: url("./assets//porf.png");
+  background-image: url("./assets/portfolio.avif");
   background-position: top center; /* Adjusted to better align the background */
   background-size: contain; /* Ensures the image fits within the container */
   background-repeat: no-repeat;

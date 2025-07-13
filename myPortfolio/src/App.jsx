@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import About from './Components/About';

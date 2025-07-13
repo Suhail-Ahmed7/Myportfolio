@@ -1,7 +1,8 @@
 import React, { forwardRef, useState } from 'react';
-import ai2 from '../assets/ai2.png'
-import event from '../assets/event.jpg'
-import notepad from '../assets/notepad.png'
+import ai2 from '../assets/ai2.png';
+import event from '../assets/event.jpg';
+import notepad from '../assets/notepad.png';
+
 const Projects = forwardRef((props, ref) => {
   const [filter, setFilter] = useState('all');
 
@@ -57,18 +58,21 @@ const Projects = forwardRef((props, ref) => {
           </h2>
           <p className="project-subtitle">Discover my work and the innovative solutions I've crafted</p>
         </div>
+
         <div className="project-filter-container d-flex flex-wrap" data-aos="fade-up" data-aos-delay="100">
           {['all', 'web', 'app', 'other'].map((category) => (
             <button
               key={category}
               className={`project-filter-btn ${filter === category ? 'active' : ''}`}
               onClick={() => setFilter(category)}
-              data-filter={category}
             >
-              {category === 'all' ? 'All Projects' : category === 'web' ? 'Web Development' : category === 'app' ? 'JavaScript/C++' : 'Other'}
+              {category === 'all' ? 'All Projects' :
+                category === 'web' ? 'Web Development' :
+                  category === 'app' ? 'JavaScript/C++' : 'Other'}
             </button>
           ))}
         </div>
+
         <div className="row g-4">
           {filteredProjects.map((project, index) => (
             <div className="col-lg-4 col-md-6" key={project.id} data-aos="fade-up" data-aos-delay={200 + index * 100}>
@@ -95,6 +99,7 @@ const Projects = forwardRef((props, ref) => {
                       </div>
                     </div>
                   </div>
+
                   <div className="project-flip-back">
                     <div className="project-back-content">
                       <div>
@@ -103,11 +108,17 @@ const Projects = forwardRef((props, ref) => {
                         <div className="project-features-list">
                           {project.features.map((feature, i) => (
                             <div className="project-feature-item" key={i}>
-                              <i className={`fas ${feature.includes('Responsive') ? 'fa-mobile-alt' : feature.includes('Languages') ? 'fa-code' : feature.includes('History') ? 'fa-search' : 'fa-paint-brush'} project-feature-icon`}></i>
+                              <i className={`fas ${feature.includes('Responsive') ? 'fa-mobile-screen-button' :  // ✅ updated icon
+                                  feature.includes('Languages') ? 'fa-code' :
+                                    feature.includes('History') ? 'fa-clock-rotate-left' :       // ✅ correct icon
+                                      'fa-lightbulb'                                                // ✅ safe fallback
+                                } project-feature-icon`}></i>
+
                               <span>{feature}</span>
                             </div>
                           ))}
                         </div>
+
                         <div className="project-tech-details">
                           <h4 className="project-tech-title">Technologies Used:</h4>
                           <div className="project-tech-stack">
@@ -117,26 +128,29 @@ const Projects = forwardRef((props, ref) => {
                           </div>
                         </div>
                       </div>
+
                       <div className="project-action-links">
-                        <a href={project.liveLink} className="project-link-btn project-link-live" target="_blank">
+                        <a href={project.liveLink} className="project-link-btn project-link-live" target="_blank" rel="noopener noreferrer">
                           <i className="fas fa-external-link-alt"></i>
                           {project.title.includes('Notepad') ? 'Watch Demo' : 'Live Demo'}
                         </a>
-                        <a href={project.codeLink} className="project-link-btn project-link-code" target="_blank">
+                        <a href={project.codeLink} className="project-link-btn project-link-code" target="_blank" rel="noopener noreferrer">
                           <i className="fab fa-github"></i>
                           Source Code
                         </a>
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
           ))}
         </div>
+
         <div className="project-view-more-container" data-aos="fade-up" data-aos-delay="500">
           <div className="project-view-more-wrapper">
-            <a href="https://github.com/Suhail-Ahmed7" className="project-view-more-btn" target="_blank">
+            <a href="https://github.com/Suhail-Ahmed7" className="project-view-more-btn" target="_blank" rel="noopener noreferrer">
               <span className="btn-content">
                 <span className="btn-text">View More Projects</span>
                 <span className="btn-icon">
